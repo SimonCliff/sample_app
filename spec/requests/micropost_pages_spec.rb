@@ -14,8 +14,8 @@ describe "Micropost pages" do
 
 		  it "should delete a micropost" do
 		    expect { click_link "delete" }.should change(Micropost, :count).by(-1)
-		  end
 		end
+	  end
 	end
 
 
@@ -32,15 +32,15 @@ describe "Micropost pages" do
 			describe "error messages" do
 				before { click_button "Post" }
 				it { should have_content('error') }
-			end
 		end
+	end
 
 		describe "with valid information" do
 			before { fill_in 'micropost_content', with: "Lorem Ipsum" }
 
 			it "should create a micropost" do
 				expect { click_button "Post" }.should change(Micropost, :count).by(1)
-			end
 		end
+	end
 	end
 end
