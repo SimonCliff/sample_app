@@ -106,7 +106,6 @@ footer {
     }
   }
 }
-
 /* miscellaneous */
 
 .debug_dump {
@@ -116,7 +115,6 @@ footer {
   margin-top: 45px;
   @include box_sizing;
 }
-
 /* sidebar */
 
 aside {
@@ -140,6 +138,34 @@ aside {
     }
   }
 }
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
 
 .gravatar {
   float: left;
@@ -156,7 +182,7 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 #error_explanation {
-  color: #f00;
+  color:#f00;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
@@ -167,6 +193,7 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
+
  /* users index */
 
 .users {
@@ -207,4 +234,12 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+/* Used for character countdown when text breaches 140 characters */
+.blackText {
+  color: #000;
+}
+.redText {
+  color: red;
 }
